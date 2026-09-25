@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Chandak & Associates | Chartered Accountants | Hyderabad</title>
+    <meta name="description" content="Hyderabad-based Chartered Accountant firm specializing in Audit, Taxation, FEMA, NRI Advisory, and CFO Services. Located at Vasavi Sky City, Gachibowli.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        creamBg: '#FAF9F6',
+                        warmCard: '#FFFFFF',
+                        navyText: '#1E293B',
+                        brandBlue: '#1E3A8A',
+                        brandGold: '#D4AF37',
+                        borderLight: '#E2E8F0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-creamBg text-navyText font-sans antialiased">
+
+    <!-- ICAI Ethics Disclaimer Modal -->
+    <div id="icaiModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-60 p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 md:p-8 relative border border-gray-200">
+            <h2 class="text-2xl font-bold text-brandBlue mb-4 border-b pb-2">ICAI Regulatory Disclaimer</h2>
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+                As per the guidelines issued by the Institute of Chartered Accountants of India (ICAI), Chartered Accountants in India are not permitted to solicit work or advertise services.
+            </p>
+            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                By clicking <strong>"I Agree"</strong> below, the user acknowledges that they are seeking information regarding <strong>R Chandak & Associates</strong> on their own volition and that there has been no advertisement, personal communication, solicitation, invitation, or inducement of any kind.
+            </p>
+            <div class="flex justify-end">
+                <button onclick="acceptDisclaimer()" class="bg-brandBlue hover:bg-blue-900 text-white font-semibold px-6 py-2.5 rounded-xl shadow transition">
+                    I Agree
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-borderLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center space-x-3">
+                <img src="Picture3.jpg" alt="R Chandak & Associates Logo" class="h-14 md:h-16 w-auto object-contain rounded-lg">
+            </a>
+            <!-- Nav Links & Matching Firm LinkedIn Icon -->
+            <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-gray-700">
+                <a href="#about" class="hover:text-brandBlue transition">About Us</a>
+                <a href="#services" class="hover:text-brandBlue transition">Services</a>
+                <a href="#markets" class="hover:text-brandBlue transition">Markets</a>
+                <a href="#updates" class="hover:text-brandBlue transition">Regulatory Feed</a>
+                <a href="#calculators" class="hover:text-brandBlue transition">Financial Tools</a>
+                <a href="#team" class="hover:text-brandBlue transition">Our Team</a>
+                <a href="#social" class="hover:text-brandBlue transition">LinkedIn Feed</a>
+                <a href="#contact" class="hover:text-brandBlue transition">Contact</a>
+                <a href="https://www.linkedin.com/company/rchandakassociates/" target="_blank" rel="noopener noreferrer" title="R Chandak & Associates Firm Page" class="text-[#0A66C2] hover:text-blue-800 transition">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-20 bg-gradient-to-b from-white to-creamBg border-b border-borderLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <span class="inline-block bg-blue-100 text-brandBlue text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-4">Gachibowli, Hyderabad</span>
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Big Four Rigor.<br><span class="text-brandBlue">Industry & CFO Judgement.</span>
+                    </h1>
+                    <p class="text-gray-600 text-base md:text-lg max-w-2xl mb-8 leading-relaxed">
+                        R Chandak & Associates combines statutory compliance with strategic financial leadership—supporting growing businesses and cross-border clients to stay compliant, plan capital, and manage risk.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-brandBlue hover:bg-blue-900 text-white font-bold px-8 py-3.5 rounded-xl shadow-md transition">Schedule Consultation</a>
+                        <a href="#calculators" class="bg-white hover:bg-gray-50 text-slate-700 font-bold px-6 py-3.5 rounded-xl border border-gray-300 shadow-sm transition">Access Tools</a>
+                    </div>
+                </div>
+                <!-- Right Hero Display Card -->
+                <div class="lg:col-span-5 bg-white p-8 rounded-2xl border border-gray-200 shadow-xl text-center">
+                    <img src="Picture3.jpg" alt="R Chandak & Associates Logo" class="h-20 mx-auto mb-6 object-contain rounded-lg">
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Full-Spectrum Practice</h3>
+                    <p class="text-xs text-gray-500 mb-6">Audit • Taxation • FEMA • Cross-Border Advisory • CFO Services</p>
+                    <div class="grid grid-cols-2 gap-3 text-left text-xs font-medium text-slate-700">
+                        <div class="bg-creamBg p-3 rounded-xl border border-gray-200">✓ Audit & Assurance</div>
+                        <div class="bg-creamBg p-3 rounded-xl border border-gray-200">✓ Direct & Indirect Tax</div>
+                        <div class="bg-creamBg p-3 rounded-xl border border-gray-200">✓ FEMA & NRI Advisory</div>
+                        <div class="bg-creamBg p-3 rounded-xl border border-gray-200">✓ Virtual CFO Advisory</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE MARKET & COMMODITIES TICKER DASHBOARD (NATIVE TRADINGVIEW EMBED) -->
+    <section id="markets" class="py-10 bg-white border-b border-borderLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Live Financial Markets & Benchmarks</h2>
+                    <p class="text-xs text-gray-500 mt-1">Real-time streaming feeds for Indian Indices, Global Commodities, and Foreign Exchange</p>
+                </div>
+                <div class="mt-3 md:mt-0">
+                    <span class="inline-flex items-center text-[10px] font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> STREAMING LIVE
+                    </span>
+                </div>
+            </div>
+
+            <!-- TradingView Native Ticker Widget Container -->
+            <div class="rounded-2xl border border-gray-200 overflow-hidden shadow-sm bg-creamBg p-1">
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+                    {
+                      "symbols": [
+                        { "proName": "NSE:NIFTY", "title": "NIFTY 50" },
+                        { "proName": "BSE:SENSEX", "title": "SENSEX" },
+                        { "proName": "NSE:BANKNIFTY", "title": "BANK NIFTY" },
+                        { "proName": "MCX:GOLDPETAL1!", "title": "GOLD" },
+                        { "proName": "MCX:SILVER1!", "title": "SILVER" },
+                        { "proName": "FX_IDC:USDINR", "title": "USD / INR" }
+                      ],
+                      "isTransparent": true,
+                      "showSymbolLogo": true,
+                      "colorTheme": "light",
+                      "locale": "en"
+                    }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">About the Firm</h2>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    R Chandak & Associates is a Hyderabad-based Chartered Accountant firm built to give growing businesses and cross-border clients the depth of a Big Four service alongside the practical judgement of a hands-on CFO.
+                </p>
+            </div>
+            <div class="bg-creamBg p-8 rounded-2xl border border-gray-200 text-center max-w-2xl mx-auto shadow-sm">
+                <h3 class="text-xl font-bold text-brandBlue mb-2">Our Vision</h3>
+                <p class="text-gray-600">Our vision is to deliver quality services to clients and create value and long-term relationships.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Areas / Services -->
+    <section id="services" class="py-16 bg-creamBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Our Practice Areas</h2>
+                <p class="text-gray-600 mt-2">Comprehensive financial, regulatory, and strategic advisory</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 shadow-sm rounded-2xl border border-gray-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-brandBlue mb-3 border-b pb-2">Audit & Assurance</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Statutory Audit & Tax Audit</li>
+                        <li>• Internal Audit & Internal Financial Controls (IFC)</li>
+                        <li>• Stock & Concurrent Audit</li>
+                        <li>• Special Purpose Financial Audits</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 shadow-sm rounded-2xl border border-gray-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-brandBlue mb-3 border-b pb-2">Direct & Indirect Taxes</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Income Tax Filing & Advance Tax Planning</li>
+                        <li>• GST Registration, Filing & Tax Litigation</li>
+                        <li>• Transfer Pricing & TDS Compliance</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 shadow-sm rounded-2xl border border-gray-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-brandBlue mb-3 border-b pb-2">FEMA & NRI Advisory</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• NRI Taxation & Property Transactions</li>
+                        <li>• FEMA & RBI Regulatory Filings</li>
+                        <li>• FDI Structuring & Repatriation of Funds</li>
+                        <li>• NRE/NRO Account Advisory</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 shadow-sm rounded-2xl border border-gray-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-brandBlue mb-3 border-b pb-2">CFO Advisory & Services</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Virtual / Outsourced CFO Services</li>
+                        <li>• MIS, Budgeting & Management Reporting</li>
+                        <li>• Fundraising, Debt Structuring & Investor Pitches</li>
+                        <li>• Cost Control & Systems Automation</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 shadow-sm rounded-2xl border border-gray-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-brandBlue mb-3 border-b pb-2">Real Estate Advisory</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Commercial Transaction Structuring</li>
+                        <li>• Lease & Rental Structuring</li>
+                        <li>• Project Finance Advisory & RERA Compliance</li>
+                        <li>• Transaction Due Diligence</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 shadow-sm rounded-2xl border border-gray-200 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-brandBlue mb-3 border-b pb-2">Corporate & Insolvency</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Company Incorporation & Annual RoC Filings</li>
+                        <li>• Secretarial & Corporate Governance Advisory</li>
+                        <li>• Valuation Services & Financial Modeling</li>
+                        <li>• Stressed Asset & Turnaround Advisory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Embedded Live Notifications Feed -->
+    <section id="updates" class="py-16 bg-white border-y border-borderLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900">Live Statutory Notifications & Circulars</h2>
+                    <p class="text-gray-600 mt-2">Read complete official circulars directly on site without leaving the portal.</p>
+                </div>
+                <button onclick="fetchLatestNotifications()" class="mt-4 md:mt-0 text-xs font-bold text-brandBlue bg-blue-50 border border-blue-200 px-4 py-2 rounded-xl hover:bg-blue-100 transition flex items-center">
+                    <svg class="w-3.5 h-3.5 mr-1.5 animate-spin hidden" id="refreshSpinner" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                    Refresh Live Stream
+                </button>
+            </div>
+
+            <!-- Feed Filter Tabs -->
+            <div class="flex flex-wrap gap-2 mb-6 border-b border-gray-200 pb-3 text-xs font-bold">
+                <button onclick="filterFeed('all')" id="feed-all" class="px-4 py-1.5 bg-brandBlue text-white rounded-lg">All Circulars</button>
+                <button onclick="filterFeed('tax')" id="feed-tax" class="px-4 py-1.5 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg">Income Tax (CBDT)</button>
+                <button onclick="filterFeed('gst')" id="feed-gst" class="px-4 py-1.5 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg">GST (CBIC)</button>
+                <button onclick="filterFeed('fema')" id="feed-fema" class="px-4 py-1.5 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg">FEMA & RBI</button>
+                <button onclick="filterFeed('pib')" id="feed-pib" class="px-4 py-1.5 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg">PIB Press Releases</button>
+            </div>
+
+            <!-- On-Site Interactive Cards Grid -->
+            <div id="notificationContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically populated via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Reader for Full Statutory Text -->
+    <div id="readerModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 bg-opacity-70 p-4 hidden backdrop-blur-sm">
+        <div class="bg-white border border-gray-200 rounded-2xl max-w-2xl w-full p-6 md:p-8 relative max-h-[85vh] overflow-y-auto shadow-2xl">
+            <div class="flex justify-between items-start border-b pb-3 mb-4">
+                <div>
+                    <span id="modalCategory" class="text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-brandBlue px-2 py-0.5 rounded-md inline-block mb-1">Taxation</span>
+                    <h3 id="modalTitle" class="text-xl font-bold text-slate-900">Notification Title</h3>
+                    <p id="modalDate" class="text-xs text-gray-500 mt-1">25 September 2026</p>
+                </div>
+                <button onclick="closeReaderModal()" class="text-gray-400 hover:text-slate-900 font-bold text-xl px-2">&times;</button>
+            </div>
+            <div id="modalBody" class="text-sm text-gray-700 space-y-3 leading-relaxed">
+                <!-- Detailed text loaded dynamically -->
+            </div>
+            <div class="mt-6 pt-4 border-t flex justify-between items-center">
+                <a id="modalExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-brandBlue hover:underline flex items-center">
+                    Verify on Official Portal &rarr;
+                </a>
+                <button onclick="closeReaderModal()" class="bg-slate-800 text-white text-xs font-bold px-4 py-2 rounded-xl">Close Reader</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXHAUSTIVE FINANCIAL & TDS SUITE (INCOME TAX ACT, 2025) -->
+    <section id="calculators" class="py-16 bg-creamBg">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900">Financial & Regulatory Tools</h2>
+                <p class="text-gray-600 mt-2">Comprehensive calculation engine aligned with the Income Tax Act, 2025.</p>
+            </div>
+
+            <!-- Calculator Selector Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 border-b border-gray-300 mb-8 pb-3">
+                <button onclick="switchCalc('tds')" id="tab-tds" class="px-4 py-2 text-xs font-bold bg-brandBlue text-white rounded-xl">TDS Master Engine (ITA 2025)</button>
+                <button onclick="switchCalc('gst')" id="tab-gst" class="px-4 py-2 text-xs font-bold bg-white text-gray-600 border hover:bg-gray-50 rounded-xl">GST Calc</button>
+                <button onclick="switchCalc('tax')" id="tab-tax" class="px-4 py-2 text-xs font-bold bg-white text-gray-600 border hover:bg-gray-50 rounded-xl">Income Tax</button>
+                <button onclick="switchCalc('cg')" id="tab-cg" class="px-4 py-2 text-xs font-bold bg-white text-gray-600 border hover:bg-gray-50 rounded-xl">Capital Gains</button>
+                <button onclick="switchCalc('sip')" id="tab-sip" class="px-4 py-2 text-xs font-bold bg-white text-gray-600 border hover:bg-gray-50 rounded-xl">SIP Wealth</button>
+            </div>
+
+            <!-- EXHAUSTIVE TDS SECTION CALCULATOR -->
+            <div id="calc-tds" class="bg-white p-8 rounded-2xl border border-gray-200 max-w-2xl mx-auto shadow-sm">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="text-lg font-bold text-slate-900">Complete TDS & TCS Engine (Income Tax Act, 2025)</h3>
+                    <span class="text-[10px] font-bold bg-blue-100 text-brandBlue px-2 py-0.5 rounded-full">Sections 392 & 393</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-6">Select transaction category under the consolidated statutory code framework:</p>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Statutory Category & Code (ITA 2025 / Ref Old Sec)</label>
+                        <select id="tdsSectionSelect" onchange="runTdsEngine()" class="w-full border p-3 rounded-xl text-xs font-medium text-slate-800 focus:ring-2 focus:ring-brandBlue outline-none">
+                            <option value="392_1a">Sec 392(1)(a) [Code 1001] - Salary / Remuneration (Old Sec 192)</option>
+                            <option value="392_6">Sec 392(6) [Code 1004] - Premature EPF Withdrawal (Threshold: ₹50,000 | 10%) (Old Sec 192A)</option>
+                            <option value="393_5i">Sec 393(1) Sl 5(i) [Code 1002] - Interest on Securities (Threshold: ₹10,000 | 10%) (Old Sec 193)</option>
+                            <option value="393_5ii_reg">Sec 393(1) Sl 5(ii) [Code 1003] - Bank Interest - Regular (Threshold: ₹50,000 | 10%) (Old Sec 194A)</option>
+                            <option value="393_5ii_sr">Sec 393(1) Sl 5(ii) [Code 1003] - Bank Interest - Senior Citizens (Threshold: ₹1,00,000 | 10%) (Old Sec 194A)</option>
+                            <option value="393_7">Sec 393(1) Sl 7 [Code 1029] - Declared Dividends (Threshold: ₹10,000 | 10%) (Old Sec 194)</option>
+                            <option value="393_6i_ind">Sec 393(1) Sl 6(i) [Code 1024] - Contractor/Work (Individual/HUF) (Single: ₹30k / TY: ₹1L | 1%) (Old Sec 194C)</option>
+                            <option value="393_6i_oth">Sec 393(1) Sl 6(i) [Code 1025] - Contractor/Work (Company/Firm) (Single: ₹30k / TY: ₹1L | 2%) (Old Sec 194C)</option>
+                            <option value="393_8i">Sec 393(1) Sl 8(i) [Code 1005] - Insurance Commission (Threshold: ₹20,000 | 2% / 10%) (Old Sec 194D)</option>
+                            <option value="393_8i_da">Sec 393(1) Sl 8(i) [Code 1006] - Life Insurance Payouts (Threshold: ₹1,00,000 | 2%) (Old Sec 194DA)</option>
+                            <option value="393_8i_h">Sec 393(1) Sl 8(i) [Code 1007] - Commission or Brokerage (Threshold: ₹20,000 | 2%) (Old Sec 194H)</option>
+                            <option value="393_2iia">Sec 393(1) Sl 2(ii)(a) [Code 1008] - Rent on Plant & Machinery (Threshold: ₹50,000/mo | 2%) (Old Sec 194I)</option>
+                            <option value="393_2iib">Sec 393(1) Sl 2(ii)(b) [Code 1009] - Rent on Land/Building/Furniture (Threshold: ₹50,000/mo | 10%) (Old Sec 194I)</option>
+                            <option value="393_2_ind">Sec 393(1) Sl 2 [Form 141] - Property Rent by Individual/HUF (Threshold: ₹50,000/mo | 2%) (Old Sec 194IB)</option>
+                            <option value="393_3i">Sec 393(1) Sl 3(i) [Form 141] - Transfer of Immovable Property (Threshold: ₹50,00,000 | 1%) (Old Sec 194IA)</option>
+                            <option value="393_3ii">Sec 393(1) Sl 3(ii) [Code 1011] - Joint Development Agreements (JDA Consideration | 10%) (Old Sec 194IC)</option>
+                            <option value="393_6iii_tech">Sec 393(1) Sl 6(iii) [Code 1026] - Technical / Royalty Fees / Call Centre (Threshold: ₹50,000 | 2%) (Old Sec 194J)</option>
+                            <option value="393_6iii_prof">Sec 393(1) Sl 6(iii) [Code 1027] - Professional Fees (Threshold: ₹50,000 | 10%) (Old Sec 194J)</option>
+                            <option value="393_6iii_dir">Sec 393(1) Sl 6(iii) [Code 1028] - Director Remuneration / Fees (No Threshold | 10%) (Old Sec 194J)</option>
+                            <option value="393_6ii">Sec 393(1) Sl 6(ii) [Form 141] - Contract/Prof Fees by Individual/HUF (Threshold: ₹50,00,000 | 2%) (Old Sec 194M)</option>
+                            <option value="393_10_7">Sec 393(10) Sl 7 [Code 1067] - Partner Salary/Remuneration/Interest by Firm (Threshold: ₹20,000 | 10%) (Old Sec 194T)</option>
+                            <option value="393_8ii">Sec 393(1) Sl 8(ii) [Code 1030] - Purchase of Goods (Aggregate > ₹50,00,000 | 0.10%) (Old Sec 194Q)</option>
+                            <option value="393_8iv">Sec 393(1) Sl 8(iv) [Code 1032] - Business Benefits / Perquisites (Threshold: ₹20,000 | 10%) (Old Sec 194R)</option>
+                            <option value="393_8vi">Sec 393(1) Sl 8(vi) [Form 141] - Virtual Digital Assets / Crypto Transfer (Threshold: ₹10k/₹50k | 1%) (Old Sec 194S)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Transaction Amount (₹)</label>
+                        <input type="number" id="tdsTxnAmount" value="250000" oninput="runTdsEngine()" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+
+                    <div id="tdsEngineResult" class="bg-creamBg p-5 rounded-xl border border-gray-200 mt-4 text-xs space-y-2">
+                        <div class="flex justify-between"><span>New Section (ITA 2025):</span> <span id="outSecCode" class="font-bold text-slate-900">Sec 393(1) Sl 6(iii)</span></div>
+                        <div class="flex justify-between"><span>Official Return Code:</span> <span id="outReturnCode" class="font-bold text-brandBlue">Payment Code 1027</span></div>
+                        <div class="flex justify-between"><span>Statutory Exemption Threshold:</span> <span id="outThreshold" class="font-semibold text-gray-700">₹50,000</span></div>
+                        <div class="flex justify-between"><span>Applicable TDS Rate:</span> <span id="outRate" class="font-bold text-brandBlue">10%</span></div>
+                        <div class="flex justify-between border-t pt-2 font-extrabold text-sm text-slate-900"><span>Estimated TDS Deduction:</span> <span id="outTdsVal" class="text-brandBlue">₹25,000</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GST Calculator Card -->
+            <div id="calc-gst" class="bg-white p-8 rounded-2xl border border-gray-200 max-w-xl mx-auto hidden shadow-sm">
+                <h3 class="text-lg font-bold text-slate-900 mb-4">GST Calculator</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Amount (₹)</label>
+                        <input type="number" id="gstAmount" value="10000" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">GST Rate (%)</label>
+                        <select id="gstRate" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                            <option value="5">5%</option>
+                            <option value="12">12%</option>
+                            <option value="18" selected>18%</option>
+                            <option value="28">28%</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Calculation Type</label>
+                        <div class="flex space-x-4">
+                            <label class="inline-flex items-center text-sm"><input type="radio" name="gstType" value="exclusive" checked class="mr-2"> Add GST (Exclusive)</label>
+                            <label class="inline-flex items-center text-sm"><input type="radio" name="gstType" value="inclusive" class="mr-2"> Remove GST (Inclusive)</label>
+                        </div>
+                    </div>
+                    <button onclick="calculateGST()" class="w-full bg-brandBlue text-white font-bold py-3 rounded-xl hover:bg-blue-900 transition">Calculate GST</button>
+                    <div id="gstResult" class="bg-creamBg p-4 rounded-xl border border-gray-200 mt-4 text-sm hidden">
+                        <div class="flex justify-between py-1"><span>Net Amount:</span> <span id="gstNet" class="font-semibold">₹0</span></div>
+                        <div class="flex justify-between py-1"><span>GST Amount:</span> <span id="gstTax" class="font-semibold text-brandBlue">₹0</span></div>
+                        <div class="flex justify-between py-1 border-t mt-1 pt-1 font-bold"><span>Total Amount:</span> <span id="gstTotal" class="text-slate-900">₹0</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Income Tax Calculator Card -->
+            <div id="calc-tax" class="bg-white p-8 rounded-2xl border border-gray-200 max-w-xl mx-auto hidden shadow-sm">
+                <h3 class="text-lg font-bold text-slate-900 mb-4">Income Tax Estimator (New Tax Regime)</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Annual Income (₹)</label>
+                        <input type="number" id="taxIncome" value="1200000" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <button onclick="calculateTax()" class="w-full bg-brandBlue text-white font-bold py-3 rounded-xl hover:bg-blue-900 transition">Estimate Income Tax</button>
+                    <div id="taxResult" class="bg-creamBg p-4 rounded-xl border border-gray-200 mt-4 text-sm hidden">
+                        <div class="flex justify-between py-1"><span>Standard Deduction:</span> <span class="font-semibold">₹75,000</span></div>
+                        <div class="flex justify-between py-1"><span>Taxable Net Income:</span> <span id="taxNetIncome" class="font-semibold">₹0</span></div>
+                        <div class="flex justify-between py-1 border-t mt-1 pt-1 font-bold"><span>Estimated Tax Payable (incl. Cess):</span> <span id="taxPayable" class="text-brandBlue">₹0</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capital Gains Tax Estimator -->
+            <div id="calc-cg" class="bg-white p-8 rounded-2xl border border-gray-200 max-w-xl mx-auto hidden shadow-sm">
+                <h3 class="text-lg font-bold text-slate-900 mb-4">Capital Gains Tax Estimator</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Asset Class</label>
+                        <select id="cgType" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                            <option value="ltcg_equity">Listed Equity / Equity MF (LTCG > 12 Months)</option>
+                            <option value="stcg_equity">Listed Equity / Equity MF (STCG < 12 Months)</option>
+                            <option value="property">Immovable Property / Real Estate</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Sale Price / Consideration (₹)</label>
+                        <input type="number" id="cgSale" value="5000000" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Purchase / Acquisition Cost (₹)</label>
+                        <input type="number" id="cgCost" value="3000000" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <button onclick="calculateCG()" class="w-full bg-brandBlue text-white font-bold py-3 rounded-xl hover:bg-blue-900 transition">Compute Capital Gains Tax</button>
+                    <div id="cgResult" class="bg-creamBg p-4 rounded-xl border border-gray-200 mt-4 text-sm hidden">
+                        <div class="flex justify-between py-1"><span>Gross Capital Gain:</span> <span id="cgGain" class="font-semibold">₹0</span></div>
+                        <div class="flex justify-between py-1 border-t mt-1 pt-1 font-bold"><span>Estimated Tax Payable:</span> <span id="cgTax" class="text-brandBlue">₹0</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIP Calculator Card -->
+            <div id="calc-sip" class="bg-white p-8 rounded-2xl border border-gray-200 max-w-xl mx-auto hidden shadow-sm">
+                <h3 class="text-lg font-bold text-slate-900 mb-4">SIP Return Calculator</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Monthly Investment (₹)</label>
+                        <input type="number" id="sipAmount" value="10000" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Expected Annual Return (%)</label>
+                        <input type="number" id="sipRate" value="12" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Time Period (Years)</label>
+                        <input type="number" id="sipYears" value="5" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none">
+                    </div>
+                    <button onclick="calculateSIP()" class="w-full bg-brandBlue text-white font-bold py-3 rounded-xl hover:bg-blue-900 transition">Calculate Returns</button>
+                    <div id="sipResult" class="bg-creamBg p-4 rounded-xl border border-gray-200 mt-4 text-sm hidden">
+                        <div class="flex justify-between py-1"><span>Total Invested:</span> <span id="sipInvested" class="font-semibold">₹0</span></div>
+                        <div class="flex justify-between py-1"><span>Estimated Wealth Gain:</span> <span id="sipGain" class="font-semibold text-emerald-600">₹0</span></div>
+                        <div class="flex justify-between py-1 border-t mt-1 pt-1 font-bold"><span>Total Maturity Value:</span> <span id="sipTotal" class="text-brandBlue">₹0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team Section -->
+    <section id="team" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Leadership Team</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Member 1: CA Rajat Chandak -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center space-x-4">
+                                <img src="Rajat.png" alt="CA Rajat Chandak" class="w-20 h-20 object-cover rounded-2xl border border-gray-200">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900">CA Rajat Chandak</h3>
+                                    <span class="text-xs font-semibold text-brandBlue bg-blue-100 px-2.5 py-0.5 rounded-full inline-block mt-1">ACA, B.Com (H) | Founder</span>
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/carajatchandak/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="text-[#0A66C2] hover:text-blue-800 transition">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+                            </a>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            13+ years of working experience spanning Big 4 Consulting and industry CFO roles. Specialist in corporate risk, governance, process reviews, risk-based audits, valuations, inbound/outbound investments, and FEMA advisory. Former CFO for a commercial real estate firm acquired by a REIT institution.
+                        </p>
+                        <p class="text-xs text-gray-500 mt-4 font-medium">Previous Organizations: Grant Thornton, KPMG, Mindspace Business Parks REIT</p>
+                    </div>
+                </div>
+
+                <!-- Member 2: Harsikha Sahu -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-center space-x-4">
+                                <img src="Harsikha.png" alt="Harsikha Sahu" class="w-20 h-20 object-cover rounded-2xl border border-gray-200">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900">Harsikha Sahu</h3>
+                                    <span class="text-xs font-semibold text-brandBlue bg-blue-100 px-2.5 py-0.5 rounded-full inline-block mt-1">MBA, B.Com (H)</span>
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/harsikha-sahu-051828166/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="text-[#0A66C2] hover:text-blue-800 transition">
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+                            </a>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            10+ years of background in capital markets, banking, and insurance. Expertise in equity market research, stock broking, NRI banking, and UHNI/HNI portfolio management across India and US markets. Licensed professional from NSE and IRDAI.
+                        </p>
+                        <p class="text-xs text-gray-500 mt-4 font-medium">Previous Organizations: ICICI Bank (NRI Division), HDFC Bank (UHNI Book), Karvy</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LinkedIn Live Post Stream -->
+    <section id="social" class="py-16 bg-creamBg border-t border-borderLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900">LinkedIn Publications & Thought Leadership</h2>
+                    <p class="text-gray-600 mt-2">Latest technical posts, practice circulars, and strategic updates from R Chandak & Associates</p>
+                </div>
+                <a href="https://www.linkedin.com/company/rchandakassociates/" target="_blank" rel="noopener noreferrer" class="mt-4 md:mt-0 text-xs font-bold text-white bg-[#0A66C2] px-4 py-2 rounded-xl hover:bg-blue-800 transition flex items-center">
+                    <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+                    Follow R Chandak & Associates on LinkedIn
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Post Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="Picture3.jpg" alt="R Chandak & Associates" class="h-8 w-auto rounded-lg">
+                            <div>
+                                <p class="text-xs font-bold text-slate-900">R Chandak & Associates</p>
+                                <p class="text-[10px] text-gray-400">Chartered Accountants • LinkedIn</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-700 leading-relaxed">
+                            Practical advisory note on cross-border FDI structuring and FEMA reporting for Indian startups receiving foreign investments. Structuring equity instruments while maintaining complete compliance with RBI guidelines.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gray-100 flex justify-between items-center text-xs">
+                        <span class="text-gray-400">Published on LinkedIn</span>
+                        <a href="https://www.linkedin.com/company/rchandakassociates/" target="_blank" rel="noopener noreferrer" class="text-[#0A66C2] hover:text-blue-800 transition">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Post Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="Picture3.jpg" alt="R Chandak & Associates" class="h-8 w-auto rounded-lg">
+                            <div>
+                                <p class="text-xs font-bold text-slate-900">CA Rajat Chandak</p>
+                                <p class="text-[10px] text-gray-400">Founder & Managing Partner • LinkedIn</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-700 leading-relaxed">
+                            Virtual CFO perspectives: Moving beyond basic statutory accounting to deliver strategic capital planning, risk management, and investor reporting for commercial real estate and mid-market enterprises.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gray-100 flex justify-between items-center text-xs">
+                        <span class="text-gray-400">Published on LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/carajatchandak/" target="_blank" rel="noopener noreferrer" class="text-[#0A66C2] hover:text-blue-800 transition">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Post Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-4">
+                            <img src="Picture3.jpg" alt="R Chandak & Associates" class="h-8 w-auto rounded-lg">
+                            <div>
+                                <p class="text-xs font-bold text-slate-900">R Chandak & Associates</p>
+                                <p class="text-[10px] text-gray-400">Chartered Accountants • LinkedIn</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-700 leading-relaxed">
+                            GST & Tax Advisory Update: End-of-quarter checklist for GST Input Tax Credit (ITC) reconciliation, e-way bill compliance, and advance tax estimations under the New Tax Regime rules.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gray-100 flex justify-between items-center text-xs">
+                        <span class="text-gray-400">Published on LinkedIn</span>
+                        <a href="https://www.linkedin.com/company/rchandakassociates/" target="_blank" rel="noopener noreferrer" class="text-[#0A66C2] hover:text-blue-800 transition">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Business Card Address & Google Maps Embed -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details -->
+                <div class="lg:col-span-6">
+                    <img src="Picture3.jpg" alt="R Chandak & Associates Logo" class="h-16 mb-6 object-contain rounded-lg">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Get in Touch</h2>
+                    <p class="text-gray-600 mb-6 text-sm">Reach out to our team for strategic financial advice or professional consultations.</p>
+                    
+                    <div class="space-y-4 text-sm text-gray-700 bg-creamBg p-6 rounded-2xl border border-gray-200 mb-6 shadow-sm">
+                        <div class="flex items-start space-x-3">
+                            <span class="font-bold text-brandBlue">Address:</span>
+                            <p>8th Floor, Vasavi Sky City, Gachibowli, Hyderabad, Telangana</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="font-bold text-brandBlue">Phone:</span>
+                            <a href="tel:+917278843432" class="hover:underline">+91 72788 43432</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="font-bold text-brandBlue">Email:</span>
+                            <a href="mailto:rajat@chandakassociates.com" class="hover:underline">rajat@chandakassociates.com</a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="font-bold text-brandBlue">Website:</span>
+                            <a href="http://www.chandakassociates.com" target="_blank" class="hover:underline">www.chandakassociates.com</a>
+                        </div>
+                        <div class="pt-2 flex items-center space-x-2 border-t border-gray-200">
+                            <span class="font-bold text-brandBlue">Firm LinkedIn:</span>
+                            <a href="https://www.linkedin.com/company/rchandakassociates/" target="_blank" rel="noopener noreferrer" class="text-[#0A66C2] hover:text-blue-800 transition">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26Z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Interactive Embed -->
+                    <div class="rounded-2xl border border-gray-200 shadow-sm overflow-hidden h-64">
+                        <iframe 
+                            class="w-full h-full border-0" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.84379374163!2d78.3615413!3d17.4336214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93f01f11cb21%3A0xb3bd6a8b13be21fa!2sVasavi%20Sky%20City!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="lg:col-span-6">
+                    <form class="space-y-4 bg-creamBg p-8 rounded-2xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Send an Advisory Request</h3>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Full Name</label>
+                            <input type="text" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Email Address</label>
+                            <input type="email" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Message / Area of Inquiry</label>
+                            <textarea rows="5" class="w-full border p-3 rounded-xl text-sm focus:ring-2 focus:ring-brandBlue outline-none" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brandBlue text-white font-bold py-3.5 rounded-xl hover:bg-blue-900 transition">Submit Request</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 border-t border-borderLight text-xs text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
+            <p>&copy; R Chandak & Associates, Chartered Accountants. All Rights Reserved.</p>
+            <p>Compliant with ICAI Guidelines on Website Disclosures.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts & Engine Handlers -->
+    <script>
+        function acceptDisclaimer() {
+            document.getElementById('icaiModal').style.display = 'none';
+        }
+
+        // Complete TDS Dictionary (INCOME TAX ACT, 2025)
+        const tdsRules2025 = {
+            '392_1a': { sec: 'Sec 392(1)(a) [ITA 2025]', code: 'Payment Code 1001', threshold: 'Basic Slab Exemption', rate: 0.10 },
+            '392_6': { sec: 'Sec 392(6) [ITA 2025]', code: 'Payment Code 1004', threshold: '₹50,000', rate: 0.10 },
+            '393_5i': { sec: 'Sec 393(1) Sl 5(i) [ITA 2025]', code: 'Payment Code 1002', threshold: '₹10,000', rate: 0.10 },
+            '393_5ii_reg': { sec: 'Sec 393(1) Sl 5(ii) [ITA 2025]', code: 'Payment Code 1003', threshold: '₹50,000', rate: 0.10 },
+            '393_5ii_sr': { sec: 'Sec 393(1) Sl 5(ii) [ITA 2025]', code: 'Payment Code 1003', threshold: '₹1,00,000', rate: 0.10 },
+            '393_7': { sec: 'Sec 393(1) Sl 7 [ITA 2025]', code: 'Payment Code 1029', threshold: '₹10,000', rate: 0.10 },
+            '393_6i_ind': { sec: 'Sec 393(1) Sl 6(i) [ITA 2025]', code: 'Payment Code 1024', threshold: '₹30,000 (Single) / ₹1,00,000 (TY)', rate: 0.01 },
+            '393_6i_oth': { sec: 'Sec 393(1) Sl 6(i) [ITA 2025]', code: 'Payment Code 1025', threshold: '₹30,000 (Single) / ₹1,00,000 (TY)', rate: 0.02 },
+            '393_8i': { sec: 'Sec 393(1) Sl 8(i) [ITA 2025]', code: 'Payment Code 1005', threshold: '₹20,000', rate: 0.02 },
+            '393_8i_da': { sec: 'Sec 393(1) Sl 8(i) [ITA 2025]', code: 'Payment Code 1006', threshold: '₹1,00,000', rate: 0.02 },
+            '393_8i_h': { sec: 'Sec 393(1) Sl 8(i) [ITA 2025]', code: 'Payment Code 1007', threshold: '₹20,000', rate: 0.02 },
+            '393_2iia': { sec: 'Sec 393(1) Sl 2(ii)(a) [ITA 2025]', code: 'Payment Code 1008', threshold: '₹50,000/month', rate: 0.02 },
+            '393_2iib': { sec: 'Sec 393(1) Sl 2(ii)(b) [ITA 2025]', code: 'Payment Code 1009', threshold: '₹50,000/month', rate: 0.10 },
+            '393_2_ind': { sec: 'Sec 393(1) Sl 2 [ITA 2025]', code: 'PAN Return Form 141', threshold: '₹50,000/month', rate: 0.02 },
+            '393_3i': { sec: 'Sec 393(1) Sl 3(i) [ITA 2025]', code: 'PAN Return Form 141', threshold: '₹50,00,000', rate: 0.01 },
+            '393_3ii': { sec: 'Sec 393(1) Sl 3(ii) [ITA 2025]', code: 'Payment Code 1011', threshold: 'Monetary JDA Consideration', rate: 0.10 },
+            '393_6iii_tech': { sec: 'Sec 393(1) Sl 6(iii) [ITA 2025]', code: 'Payment Code 1026', threshold: '₹50,000', rate: 0.02 },
+            '393_6iii_prof': { sec: 'Sec 393(1) Sl 6(iii) [ITA 2025]', code: 'Payment Code 1027', threshold: '₹50,000', rate: 0.10 },
+            '393_6iii_dir': { sec: 'Sec 393(1) Sl 6(iii) [ITA 2025]', code: 'Payment Code 1028', threshold: 'Nil Exemption', rate: 0.10 },
+            '393_6ii': { sec: 'Sec 393(1) Sl 6(ii) [ITA 2025]', code: 'PAN Return Form 141', threshold: '₹50,00,000', rate: 0.02 },
+            '393_10_7': { sec: 'Sec 393(10) Sl 7 [ITA 2025]', code: 'Payment Code 1067', threshold: '₹20,000', rate: 0.10 },
+            '393_8ii': { sec: 'Sec 393(1) Sl 8(ii) [ITA 2025]', code: 'Payment Code 1030', threshold: '₹50,00,000 Aggregate', rate: 0.001 },
+            '393_8iv': { sec: 'Sec 393(1) Sl 8(iv) [ITA 2025]', code: 'Payment Code 1032', threshold: '₹20,000', rate: 0.10 },
+            '393_8vi': { sec: 'Sec 393(1) Sl 8(vi) [ITA 2025]', code: 'PAN Return Form 141', threshold: '₹10,000 / ₹50,000', rate: 0.01 }
+        };
+
+        function runTdsEngine() {
+            const key = document.getElementById('tdsSectionSelect').value;
+            const val = parseFloat(document.getElementById('tdsTxnAmount').value) || 0;
+            const rule = tdsRules2025[key];
+
+            document.getElementById('outSecCode').innerText = rule.sec;
+            document.getElementById('outReturnCode').innerText = rule.code;
+            document.getElementById('outThreshold').innerText = rule.threshold;
+            document.getElementById('outRate').innerText = (rule.rate * 100) + '%';
+            
+            const tdsVal = val * rule.rate;
+            document.getElementById('outTdsVal').innerText = '₹' + tdsVal.toLocaleString('en-IN', {maximumFractionDigits: 2});
+        }
+
+        // Notification Engine
+        const sampleNotifications = [
+            { 
+                category: 'tax', 
+                title: 'CBDT Circular No. 14/2026', 
+                date: '22 Sep 2026', 
+                desc: 'Clarification regarding revised guidelines for condonation of delay under Section 392/393.',
+                fullText: 'The Central Board of Direct Taxes (CBDT) has issued Circular No. 14/2026 providing explicit relief and condonation guidelines for delayed submissions under the Income Tax Act, 2025. Deductors opting for concessional tax regimes can submit condonation applications to the jurisdictional Principal Commissioner, subject to satisfying proof of genuine hardship.',
+                link: 'https://www.incometax.gov.in/iec/foportal/'
+            },
+            { 
+                category: 'gst', 
+                title: 'CBIC Advisory #582', 
+                date: '20 Sep 2026', 
+                desc: 'Enhanced e-Invoicing threshold updates & automated ITC matching protocols on GST Portal.',
+                fullText: 'The Central Board of Indirect Taxes and Customs (CBIC) has released Advisory #582 outlining automated Input Tax Credit (ITC) reconciliation protocols between GSTR-2B and GSTR-3B filings. Businesses are advised to review auto-drafted ITC statements before finalizing monthly tax liabilities to avoid automated audit flags under Section 73/74.',
+                link: 'https://cbic-gst.gov.in/'
+            },
+            { 
+                category: 'fema', 
+                title: 'RBI Master Direction Amendment', 
+                date: '18 Sep 2026', 
+                desc: 'Revised Overseas Direct Investment (ODI) & Liberalised Remittance Scheme (LRS) reporting norms.',
+                fullText: 'The Reserve Bank of India (RBI) has issued amendments to Master Direction - Foreign Investment in India and Overseas Investment. Authorized Dealer Category-I banks are now mandated to verify enhanced reporting forms for outbound investments exceeding prescribed caps under the LRS framework.',
+                link: 'https://m.rbi.org.in/Scripts/BS_PressreleaseDisplay.aspx'
+            },
+            { 
+                category: 'pib', 
+                title: 'Ministry of Finance Release', 
+                date: '15 Sep 2026', 
+                desc: 'Cabinet approves streamlined regulatory framework for IFSC GIFT City setup.',
+                fullText: 'The Ministry of Finance announced approval for streamlined regulatory clearances for international financial services, treasury centers, and cross-border consulting practices operating out of IFSC GIFT City.',
+                link: 'https://www.pib.gov.in/Allrel.aspx'
+            },
+            { 
+                category: 'tax', 
+                title: 'CBDT Advance Tax Notice', 
+                date: '10 Sep 2026', 
+                desc: 'Quarterly Advance Tax payment reminders & e-Verification scheme updates for Tax Year 2026-27.',
+                fullText: 'Taxpayers are reminded of the second installment deadline for Advance Tax for Tax Year 2026-27. Corporate taxpayers and individuals with estimated tax liability exceeding ₹10,000 are required to pay mandated statutory installments on time.',
+                link: 'https://www.incometax.gov.in/iec/foportal/'
+            },
+            { 
+                category: 'gst', 
+                title: 'GST Council Clarification', 
+                date: '05 Sep 2026', 
+                desc: 'Clarification on taxability of corporate guarantees provided by parent entities.',
+                fullText: 'The CBIC has issued formal circulars clarifying valuation rules for corporate guarantees extended by parent companies to subsidiaries, fixing the taxable valuation at 1% of the guarantee amount or actual consideration, whichever is higher.',
+                link: 'https://cbic-gst.gov.in/'
+            }
+        ];
+
+        function renderNotifications(items) {
+            const container = document.getElementById('notificationContainer');
+            container.innerHTML = '';
+            items.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = "bg-creamBg p-6 rounded-2xl border border-gray-200 flex flex-col justify-between hover:shadow-md transition";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-brandBlue px-2 py-0.5 rounded-md">${item.category}</span>
+                            <span class="text-[11px] text-gray-400">${item.date}</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">${item.title}</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed mb-4">${item.desc}</p>
+                    </div>
+                    <button onclick="openReaderModal(${index})" class="text-xs font-bold text-brandBlue hover:underline text-left flex items-center">
+                        Read Full Circular On-Site &rarr;
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function openReaderModal(index) {
+            const item = sampleNotifications[index];
+            document.getElementById('modalCategory').innerText = item.category.toUpperCase();
+            document.getElementById('modalTitle').innerText = item.title;
+            document.getElementById('modalDate').innerText = 'Published: ' + item.date;
+            document.getElementById('modalBody').innerHTML = `<p>${item.fullText}</p>`;
+            document.getElementById('modalExternalLink').href = item.link;
+            document.getElementById('readerModal').classList.remove('hidden');
+        }
+
+        function closeReaderModal() {
+            document.getElementById('readerModal').classList.add('hidden');
+        }
+
+        function filterFeed(cat) {
+            document.querySelectorAll('#updates button[id^="feed-"]').forEach(btn => {
+                btn.className = "px-4 py-1.5 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-lg";
+            });
+            document.getElementById('feed-' + cat).className = "px-4 py-1.5 bg-brandBlue text-white rounded-lg";
+
+            if (cat === 'all') {
+                renderNotifications(sampleNotifications);
+            } else {
+                renderNotifications(sampleNotifications.filter(n => n.category === cat));
+            }
+        }
+
+        function fetchLatestNotifications() {
+            const spinner = document.getElementById('refreshSpinner');
+            spinner.classList.remove('hidden');
+            setTimeout(() => {
+                spinner.classList.add('hidden');
+                renderNotifications(sampleNotifications);
+            }, 600);
+        }
+
+        // Initialize Suite
+        renderNotifications(sampleNotifications);
+        runTdsEngine();
+
+        // Financial Calculators Switcher
+        function switchCalc(calc) {
+            ['tds', 'gst', 'tax', 'cg', 'sip'].forEach(c => {
+                const el = document.getElementById('calc-' + c);
+                const tab = document.getElementById('tab-' + c);
+                if (el) el.classList.add('hidden');
+                if (tab) tab.className = "px-4 py-2 text-xs font-bold bg-white text-gray-600 border hover:bg-gray-50 rounded-xl";
+            });
+            document.getElementById('calc-' + calc).classList.remove('hidden');
+            document.getElementById('tab-' + calc).className = "px-4 py-2 text-xs font-bold bg-brandBlue text-white rounded-xl";
+        }
+
+        // GST Calc
+        function calculateGST() {
+            let amount = parseFloat(document.getElementById('gstAmount').value) || 0;
+            let rate = parseFloat(document.getElementById('gstRate').value) || 0;
+            let type = document.querySelector('input[name="gstType"]:checked').value;
+            let net, tax, total;
+
+            if (type === 'exclusive') {
+                net = amount;
+                tax = (net * rate) / 100;
+                total = net + tax;
+            } else {
+                total = amount;
+                net = total / (1 + (rate / 100));
+                tax = total - net;
+            }
+
+            document.getElementById('gstNet').innerText = '₹' + net.toLocaleString('en-IN', {maximumFractionDigits: 2});
+            document.getElementById('gstTax').innerText = '₹' + tax.toLocaleString('en-IN', {maximumFractionDigits: 2});
+            document.getElementById('gstTotal').innerText = '₹' + total.toLocaleString('en-IN', {maximumFractionDigits: 2});
+            document.getElementById('gstResult').classList.remove('hidden');
+        }
+
+        // Income Tax Calc
+        function calculateTax() {
+            let gross = parseFloat(document.getElementById('taxIncome').value) || 0;
+            let netIncome = Math.max(0, gross - 75000);
+            let tax = 0;
+
+            if (netIncome <= 700000) {
+                tax = 0;
+            } else {
+                let temp = netIncome;
+                if (temp > 1500000) { tax += (temp - 1500000) * 0.30; temp = 1500000; }
+                if (temp > 1200000) { tax += (temp - 1200000) * 0.20; temp = 1200000; }
+                if (temp > 900000)  { tax += (temp - 900000) * 0.15; temp = 900000; }
+                if (temp > 600000)  { tax += (temp - 600000) * 0.10; temp = 600000; }
+                if (temp > 300000)  { tax += (temp - 300000) * 0.05; }
+                tax = tax * 1.04;
+            }
+
+            document.getElementById('taxNetIncome').innerText = '₹' + netIncome.toLocaleString('en-IN');
+            document.getElementById('taxPayable').innerText = '₹' + tax.toLocaleString('en-IN', {maximumFractionDigits: 0});
+            document.getElementById('taxResult').classList.remove('hidden');
+        }
+
+        // Capital Gains Calc
+        function calculateCG() {
+            let type = document.getElementById('cgType').value;
+            let sale = parseFloat(document.getElementById('cgSale').value) || 0;
+            let cost = parseFloat(document.getElementById('cgCost').value) || 0;
+            let gain = Math.max(0, sale - cost);
+            let tax = 0;
+
+            if (type === 'ltcg_equity') {
+                let taxableGain = Math.max(0, gain - 125000);
+                tax = taxableGain * 0.125;
+            } else if (type === 'stcg_equity') {
+                tax = gain * 0.20;
+            } else {
+                tax = gain * 0.20;
+            }
+
+            document.getElementById('cgGain').innerText = '₹' + gain.toLocaleString('en-IN');
+            document.getElementById('cgTax').innerText = '₹' + tax.toLocaleString('en-IN', {maximumFractionDigits: 0});
+            document.getElementById('cgResult').classList.remove('hidden');
+        }
+
+        // SIP Calc
+        function calculateSIP() {
+            let p = parseFloat(document.getElementById('sipAmount').value) || 0;
+            let i = (parseFloat(document.getElementById('sipRate').value) || 0) / 12 / 100;
+            let n = (parseFloat(document.getElementById('sipYears').value) || 0) * 12;
+
+            let totalInvested = p * n;
+            let maturityValue = p * ((Math.pow(1 + i, n) - 1) / i) * (1 + i);
+            let wealthGain = maturityValue - totalInvested;
+
+            document.getElementById('sipInvested').innerText = '₹' + totalInvested.toLocaleString('en-IN');
+            document.getElementById('sipGain').innerText = '₹' + wealthGain.toLocaleString('en-IN', {maximumFractionDigits: 0});
+            document.getElementById('sipTotal').innerText = '₹' + maturityValue.toLocaleString('en-IN', {maximumFractionDigits: 0});
+            document.getElementById('sipResult').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
